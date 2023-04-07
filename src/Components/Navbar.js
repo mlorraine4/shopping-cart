@@ -1,20 +1,28 @@
 import { Link } from "react-router-dom";
+import cartImg from "../images/shopping-cart.png";
+import logo from "../images/coral-reef.png";
 
 const Navbar = ({cartIcon}) => {
     return (
       <div className="navBar">
-        <div>MadCorals</div>
+        <Link to="/home" className="navLink">
+          <div className="flex">
+            <img src={logo} className="logo"></img>
+            <div className="pageTitle">GLASS GARDEN</div>
+          </div>
+        </Link>
         <ul className="flex">
-          <Link to="/home">
-            <li>Home</li>
+          <Link className="navLink">
+            <li>LOGIN/SIGN UP</li>
           </Link>
-          <Link to="/shop">
-            <li>Shop</li>
+          <Link to="/shop" className="navLink">
+            <li>SHOP</li>
           </Link>
-          <Link to="/cart">
-            <li>Cart</li>
-            <img className="cartIcon"></img>
-            <div className="cartItems">{cartIcon}</div>
+          <Link to="/cart" className="navLink">
+            <div className="cartNav">
+              <img className="cartIcon" src={cartImg}></img>
+              <div className="cartQty">{cartIcon}</div>
+            </div>
           </Link>
         </ul>
       </div>

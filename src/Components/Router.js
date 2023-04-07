@@ -1,28 +1,56 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import Shop from "./Shop";
+import Shop from "./Shop/Shop";
 import Cart from "./Cart";
-import Checkout from "./Checkout";
 import Home from "./Home";
+import SoftCorals from "./Shop/SoftCorals";
+import LPS from "./Shop/LPS";
+import SPS from "./Shop/SPS";
+import Footer from "./Footer";
 
-const Router = ({data, addToCart, cartIcon, cart, total}) => {
-  console.log(data);
+const Router = ({
+  data,
+  addToCart,
+  cartIcon,
+  total,
+  updateCart,
+  removeFromCart,
+}) => {
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar cartIcon={cartIcon}/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route
-            path="/shop"
-            element={<Shop data={data} addToCart={addToCart} />}
-          />
-          <Route path="/cart" element={<Cart cart={cart} total={total}/>} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Navbar cartIcon={cartIcon} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route
+          path="/shop/soft-corals"
+          element={<SoftCorals data={data} addToCart={addToCart} />}
+        />
+        <Route
+          path="/shop/lps-corals"
+          element={<LPS data={data} addToCart={addToCart} />}
+        />
+        <Route
+          path="/shop/sps-corals"
+          element={<SPS data={data} addToCart={addToCart} />}
+        />
+
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              data={data}
+              total={total}
+              updateCart={updateCart}
+              removeFromCart={removeFromCart}
+              cartIcon={cartIcon}
+            />
+          }
+        />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 };
 
