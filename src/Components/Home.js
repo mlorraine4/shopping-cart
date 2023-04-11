@@ -9,7 +9,7 @@ import tank from "../images/aquarium.png";
 
 const Home = () => {
   const link = (
-    <Link to="/shop" className="shop-link">
+    <Link to="/shopping-cart/shop" className="shop-link">
       {" "}
       here.
     </Link>
@@ -23,7 +23,7 @@ const Home = () => {
           selection {link}
         </div>
       </div>
-      <Link to="/shop">
+      <Link to="/shopping-cart/shop">
         <Sale />
       </Link>
       <div className="fill"></div>
