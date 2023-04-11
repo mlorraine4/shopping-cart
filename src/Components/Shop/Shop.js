@@ -8,15 +8,15 @@ const Shop = () => {
     <div className="shop">
       <h1>SHOP</h1>
       <div className="shopButtonsContainer">
-        <Link to="/shop/soft-corals" className="shopButton">
+        <Link to="/shopping-cart/shop/soft-corals" className="shopButton">
           <img src={soft} className="shopBtnImg"></img>
           <div>SOFT CORALS</div>
         </Link>
-        <Link to="/shop/lps-corals" className="shopButton">
+        <Link to="/shopping-cart/shop/lps-corals" className="shopButton">
           <img src={lps} className="shopBtnImg"></img>
           <div>LPS CORALS</div>
         </Link>
-        <Link to="/shop/sps-corals" className="shopButton">
+        <Link to="/shopping-cart/shop/sps-corals" className="shopButton">
           <img src={sps} className="shopBtnImg"></img>
           <div>SPS CORALS</div>
         </Link>
