@@ -20,24 +20,24 @@ const Router = ({
     <BrowserRouter>
       <Navbar cartIcon={cartIcon} />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/shopping-cart" element={<Home />} />
+        <Route path="/shopping-cart/home" element={<Home />} />
+        <Route path="/shopping-cart/shop" element={<Shop />} />
         <Route
-          path="/shop/soft-corals"
+          path="/shopping-cart/shop/soft-corals"
           element={<SoftCorals data={data} addToCart={addToCart} />}
         />
         <Route
-          path="/shop/lps-corals"
+          path="/shopping-cart/shop/lps-corals"
           element={<LPS data={data} addToCart={addToCart} />}
         />
         <Route
-          path="/shop/sps-corals"
+          path="/shopping-cart/shop/sps-corals"
           element={<SPS data={data} addToCart={addToCart} />}
         />
 
         <Route
-          path="/cart"
+          path="/shopping-cart/cart"
           element={
             <Cart
               data={data}
