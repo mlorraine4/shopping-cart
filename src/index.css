@@ -18,6 +18,10 @@ body {
     url("../src/images/ColoredCrayons-7wPR.ttf") format("truetype");
 };
 
+.App {
+  text-align: center;
+}
+
 .header {
   text-align: center;
   margin: none;
